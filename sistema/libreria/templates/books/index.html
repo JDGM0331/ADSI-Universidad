@@ -1,0 +1,44 @@
+{% extends "pages/base.html" %}
+{% block titulo %} Lista de Libros {% endblock %}
+
+
+{% block contenido %}
+    
+    
+    <div class="card">
+        <div class="card-header">
+            <a name="" id="" class="btn btn-primary float-end" href="{% url 'add' %}" role="button">Agregar Nuevo Libro</a>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Libros</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Título</th>
+                        <th>Imagen</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>PHP con Laravel 8</td>
+                        <td>image.png</td>
+                        <td>Programando con frameword laravelcito</td>
+                        <td>
+                            <a name="" id="" class="btn btn-warning" href="{% url 'edit' %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="" role="button">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </div>
+
+{% endblock %}
