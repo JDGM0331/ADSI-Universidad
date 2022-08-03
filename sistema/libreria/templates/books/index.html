@@ -22,16 +22,23 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                {% for book in books %}
                     <tr>
-                        <td>1</td>
-                        <td>PHP con Laravel 8</td>
-                        <td>image.png</td>
-                        <td>Programando con frameword laravelcito</td>
+                        <td>{{ book.id }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>
+                            <img src="{{ book.image.url }}" height="100">
+                        </td>
+                        <td>{{ book.description }}</td>
                         <td>
                             <a name="" id="" class="btn btn-warning" href="{% url 'edit' %}" role="button">Editar</a>
                             <a name="" id="" class="btn btn-danger" href="" role="button">Eliminar</a>
                         </td>
                     </tr>
+                {% endfor %}
+
+
                 </tbody>
             </table>
             
